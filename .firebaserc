@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "camera-project-b7ded": {
+      "hosting": {
+        "firebase-angular-crud": [
+          "camera-project-b7ded"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "camera-project-b7ded"
+  }
+}

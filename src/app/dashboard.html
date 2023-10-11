@@ -1,0 +1,68 @@
+<div class="container-fluid">
+
+    <div class="row">
+    <div class="col-md-4 mt-5">
+    <div class="card border-0 shadow p-3">
+
+        <h5 class="text-center text-warning">Add Camera</h5>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="Name" placeholder="Name" [(ngModel)]="name">
+        <label for="Name">Camera Name</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="id" placeholder="id"[(ngModel)]="id" >
+        <label for="id">Camera ID</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="model" placeholder="model"[(ngModel)]="model" >
+        <label for="model">Camera Model</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="ip" placeholder="ip"[(ngModel)]="ip" >
+        <label for="ip">Camera ip</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="resolution" placeholder="resolution"[(ngModel)]="resolution" >
+        <label for="resolution">Resolution</label>
+      </div>
+      <button type="button" class="btn btn-outline-success" (click)="addCamera()">Add Camera</button>
+    </div>
+    <div class="col">
+        </div>
+        </div>
+        <div class="col-md-8 mt-2">
+            <h5 class="text-danger">Camera List</h5>
+            <div class="card p-3 shadow">
+                <div class="card-body">
+                    <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">id</th>
+                            <th scope="col">name</th>
+                            <th scope="col">model</th>
+                            <th scope="col">ip</th>
+                            <th scope="col">resolution</th>
+                            <th scope="col">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let camera of cameraList">
+                            <td>{{camera.id}}</td>
+                            <td>{{camera.name}}</td>
+                            <td>{{camera.model}}</td>
+                            <td>{{camera.ip}}</td>
+                            <td>{{camera.resolution}}</td>
+                            <td>
+                                <button class="btn btn-outline-danger"(click)="deleteCamera(camera)">Delete</button>
+                            </td>
+                          </tr>
+                    
+
+                        </tbody>
+                      </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
